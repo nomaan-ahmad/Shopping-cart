@@ -10,7 +10,7 @@ public class DBCon {
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		if (connection == null) {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testDB","root","toor");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopping_cart","root","toor");
 			System.out.println("Connected");
 		}
 		
