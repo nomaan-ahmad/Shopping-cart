@@ -12,6 +12,11 @@ if (auth != null) {
 
 ProductDAO pd = new ProductDAO(DBCon.getConnection());
 List<Product> products = pd.getAllProducts();
+
+ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
+if(cart_list != null) {
+	request.setAttribute("cart_list",cart_list);
+}
 %>
 <!DOCTYPE html>
 <html>
